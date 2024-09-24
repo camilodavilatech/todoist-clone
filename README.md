@@ -38,11 +38,14 @@ git push origin main
 
 - 3. En GitHub,
      ![Alt](<./.github/1%20(3).png>)
+     
   - ve a tu repositorio forkeado
   - hacer clic en el botton contribuir
   - haz clic en New Pull Request.
 
 ![Alt](<./.github/1%20(4).png>)
+
+
 
 - 4. Revisa los cambios y luego haz clic en Create Pull Request.
 - 5. Agrega un título y una descripción clara sobre los cambios.
