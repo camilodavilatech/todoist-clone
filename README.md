@@ -15,6 +15,7 @@ $ git log
 - 1.agregar el logo de todoist
 - 2.los colores que aparecen en la pagina
 - 3.Documentar comandos, los que hemos echo durante cada sesion de ahora en adelante
+- 4.agregar iconos en svg
 
 ## referencias y tutotiales
 [tutorial markdown](https://tutorialmarkdown.com/guia)
