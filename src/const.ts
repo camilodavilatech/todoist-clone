@@ -3,27 +3,32 @@ export const MetaSite = [];
 export const menuSidebar = [
   {
     label: "Add task",
-    icon: "add",
+    icon: "new-task",
     href: "/add-task",
   },
   {
-    label: "Add task",
-    icon: "add",
+    label: "Search",
+    icon: "search",
     href: "/add-task",
   },
   {
-    label: "Add task",
-    icon: "add",
+    label: "Inbox",
+    icon: "inbox",
     href: "/add-task",
   },
   {
-    label: "Add task",
-    icon: "add",
+    label: "Today",
+    icon: "today",
     href: "/add-task",
   },
   {
-    label: "Add task",
-    icon: "add",
+    label: "Upcoming",
+    icon: "upcoming",
+    href: "/add-task",
+  },
+  {
+    label: "Filters & Labels",
+    icon: "filters",
     href: "/add-task",
   },
 ];
