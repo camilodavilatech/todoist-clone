@@ -12,8 +12,8 @@ $ git log
 
 ## tareas pendientes
 
-- 1.agregar el logo de todoist
-- 2.los colores que aparecen en la pagina
+- 1.agregar el logo de todoist (fue agregado iconos svg en carpeta icons)
+- 2.los colores que aparecen en la pagina (se agregaron colores globales en layout.astro)
 - 3.Documentar comandos, los que hemos echo durante cada sesion de ahora en adelante
 - 4.agregar iconos en svg
 
@@ -54,3 +54,8 @@ git push origin main
 ## referencias y tutotiales
 
 [tutorial markdown](https://tutorialmarkdown.com/guia)
+
+## tareas realizadas
+
+- 1.agregar el logo de todoist (fue agregado iconos svg en carpeta icons)
+- 2.los colores que aparecen en la pagina (se agregaron colores globales en layout.astro)
