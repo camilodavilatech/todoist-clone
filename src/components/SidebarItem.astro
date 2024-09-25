@@ -1,0 +1,66 @@
+---
+import {Icon} from "astro-icon/components"
+
+type Props = {
+    icon: string,
+    href: string
+}
+
+const {icon, href} = Astro.props
+
+const pathname = Astro.url.pathname
+---
+
+
+<li class="item">
+    <a href={href} class:list={[
+        "item-a",
+        {active: pathname == href}
+    ]}>
+       <span
+       class:list={[
+           {"item-add": icon == "plus"}
+       ]}
+       style="display: flex; gap: 0 4px; justify-content: center; align-items: center;">
+        <Icon name={icon} size={27} class:list={[
+            {"add": icon == "plus"}
+        ]} />
+            <slot/>
+        
+       </span>
+       <span></span>
+    </a>
+</li>
+
+
+<style is:global>
+
+.item-a {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    opacity: 80%;
+    padding: 5px 10px;
+}
+.item-a:hover {
+    opacity: 100%;
+    background: var(--accents-creme);
+}
+.item-add {
+    color: var(--primary);
+    font-weight: 600;
+}
+.add {
+    background: var(--primary);
+    color: white;
+    padding: 5px;
+    border-radius: 100%;
+}
+.active {
+    color: var(--primary);
+    background: #dc4b3e14;
+    font-weight: 600;
+}
+</style>

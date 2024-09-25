@@ -1,10 +1,30 @@
-
+---
+import {menuSidebar} from "@/const"
+import SidebarItem from "./SidebarItem.astro"
+---
 
 <aside class="sidebar">
     <div class="sidebar-content">
-        <div></div>
-        <ul></ul>
-        <div></div>
+        <div>
+
+            <nav>
+                <ul >
+                    {menuSidebar.map(({label, icon, href}) => (
+                        <SidebarItem icon={icon} href={href}>
+                            {label}
+                        </SidebarItem>
+                    ))}
+                </ul>
+            </nav>
+        </div>
+        
+        <footer>
+            <ul>
+                <SidebarItem icon="plus" href="">
+                Add a team
+            </SidebarItem>
+            </ul>
+        </footer>
     </div>
 </aside>
 
@@ -18,6 +38,13 @@
         left: 0;
         bottom: 0;
         background: var(--secondary);
-        border-right: 2px solid gray;
+    }
+    .sidebar-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px 10px;
+        height: 100%;
+        border: 1px solid red;
     }
 </style>
