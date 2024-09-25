@@ -14,21 +14,21 @@ export const menuSidebar = [
   {
     label: "Inbox",
     icon: "inbox",
-    href: "/add-task",
+    href: "/app/inbox",
   },
   {
     label: "Today",
     icon: "search",
-    href: "/",
+    href: "/app/today",
   },
   {
     label: "Upcoming",
     icon: "upcoming",
-    href: "/add-task",
+    href: "/app/upcoming",
   },
   {
     label: "Filters & Labels",
     icon: "filters",
-    href: "/add-task",
+    href: "/app/filters-labels",
   },
 ];
