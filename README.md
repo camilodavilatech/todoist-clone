@@ -19,6 +19,12 @@ $ git log
 - 3.Documentar comandos, los que hemos echo durante cada sesion de ahora en adelante
 - 4.agregar iconos en svg
 
+## tareas realizadas
+
+- 1.agregar el logo de todoist (fue agregado iconos svg en carpeta icons)
+- 2.los colores que aparecen en la pagina (se agregaron colores globales en layout.astro)
+- 3 se agregó imagen avatar en carpeta pública
+
 ## Hacer un pull request
 
 - 1. confirmar los cambios
@@ -74,7 +80,4 @@ git pull origin main
 
 [referencia base de datos turso](https://turso.tech/)
 
-## tareas realizadas
 
-- 1.agregar el logo de todoist (fue agregado iconos svg en carpeta icons)
-- 2.los colores que aparecen en la pagina (se agregaron colores globales en layout.astro)
