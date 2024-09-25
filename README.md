@@ -50,9 +50,29 @@ git push origin main
 - 5. Agrega un título y una descripción clara sobre los cambios.
 - 6. Finalmente, envía el Pull Request y espera la revisión.
 
+## Hacer sync fork
+
+- 1. Sincronizar el proyecto desde github.
+
+![Alt](<./.github/SYNC1.jpg>)
+
+![Alt](<./.github/SYNC2.jpg>)
+
+- 2. Desde la consola actualizamos el local.
+
+```shell
+git pull origin main
+```
+
+![Alt](<./.github/SYNC3.jpg>)
+
 ## referencias y tutotiales
 
 [tutorial markdown](https://tutorialmarkdown.com/guia)
+
+[tutorial islas](https://www.patterns.dev/vanilla/islands-architecture/)
+
+[referencia base de datos turso](https://turso.tech/)
 
 ## tareas realizadas
 
