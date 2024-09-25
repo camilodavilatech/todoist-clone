@@ -1,14 +1,15 @@
 ---
 import {menuSidebar} from "@/const"
 import SidebarItem from "./SidebarItem.astro"
+import UserMenu from "./UserMenu.astro"
 ---
 
 <aside class="sidebar">
     <div class="sidebar-content">
         <div>
-
+            <UserMenu />
             <nav>
-                <ul >
+                <ul style="gap: 4px 0;" >
                     {menuSidebar.map(({label, icon, href}) => (
                         <SidebarItem icon={icon} href={href}>
                             {label}
@@ -45,6 +46,5 @@ import SidebarItem from "./SidebarItem.astro"
         justify-content: space-between;
         padding: 20px 10px;
         height: 100%;
-        border: 1px solid red;
     }
 </style>
