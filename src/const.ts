@@ -3,7 +3,7 @@ export const MetaSite = [];
 export const menuSidebar = [
   {
     label: "Add task",
-    icon: "new-task",
+    icon: "plus",
     href: "/add-task",
   },
   {
@@ -18,8 +18,8 @@ export const menuSidebar = [
   },
   {
     label: "Today",
-    icon: "today",
-    href: "/add-task",
+    icon: "search",
+    href: "/",
   },
   {
     label: "Upcoming",
