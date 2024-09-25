@@ -16,16 +16,13 @@ const { title } = Astro.props;
 		
 	</head>
 	<body style="display: flex;">
-		<Sideabar/>
-		<main>
-			<Header />
-			<slot />
-		</main>
+		<slot />
 	</body>
 </html>
 <style is:global>
 	:root {
 		--primary: #dc4c3e;
+		--primary-op: #dc4b3e14;
 		--secondary: #fcfaf8;
 		--red-500: #e34432;
 		--green: #ebf5f0;

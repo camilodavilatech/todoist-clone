@@ -1,0 +1,19 @@
+---
+import Sideabar from "@/components/Sideabar.astro";
+import Layout from "./Layout.astro";
+import Header from "@/components/Header.astro";
+
+type Props = {
+    title: string;
+};
+
+const {title} = Astro.props
+---
+
+<Layout title={title}>
+    <Sideabar/>
+		<main>
+			<Header />
+			<slot />
+		</main>
+</Layout>
