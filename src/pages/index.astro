@@ -1,7 +1,19 @@
 ---
+import GoogleSignIn from "@/components/GoogleSignIn.astro"
 import Layout from "@/layouts/Layout.astro"
 ---
 
 <Layout title="login">
-    <h1>login</h1>
+    <main>
+        <GoogleSignIn />
+    </main>
 </Layout>
+
+
+<style>
+    main {
+        display: grid;
+        place-content: center;
+        height: 100dvh;
+    }
+</style>

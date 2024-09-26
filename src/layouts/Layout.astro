@@ -1,7 +1,6 @@
 ---
 import Seo from '../components/Seo.astro';
-import Sideabar from '../components/Sideabar.astro';
-import Header from "../components/Header.astro";
+
 
 interface Props {
 	title: string;
@@ -13,7 +12,7 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="en">
 	<head>
-		
+		<Seo title={title}/>
 	</head>
 	<body style="display: flex;">
 		<slot />
