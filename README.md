@@ -25,6 +25,14 @@ $ git log
 - 2.los colores que aparecen en la pagina (se agregaron colores globales en layout.astro)
 - 3 se agregó imagen avatar en carpeta pública
 
+   -26/09/2024-
+- 4.se creo las credenciales de google cloud para la autenticacion
+- 5.se creo en la raiz del proyecto el archivo .env dentro se crea las variables GOOGLE_CLIENT_SECRET y GOOGLE_CLIENT_ID y se agrega la        informacion de cada uno
+-6.se detiene la terminal y se agrega el siguiente comando (npx astro add vercel) ejecutar codigo al lado del servidor y (npx astro add auth-astro) permite añadir la autenticacion 
+-7. se crea un archivo .env.dev como ejemplo para dar a entender que se debe anexar la coneccion a google cloud
+-8. en el archivo .env se agrega las variables AUTH_SECRET=<auth-secret> AUTH_TRUST_HOST=true y en la variable se crea un id hasheado que nos arroja la terminal con el comando (openssl rand -hex 32) y lo pegamos en aAUTH_SECRET=.
+-9. creamos un componente de autenticacion en componentes creamos el archivo GoogleSingIn.astro y dentro se agrega el codigo svg del boton de google
+-10. se da estilo al boton de inicio de sesion con google
 ## Hacer un pull request
 
 - 1. confirmar los cambios
