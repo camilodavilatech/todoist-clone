@@ -1,0 +1,38 @@
+---
+import { getSession } from "auth-astro/server"
+
+const session = await getSession(Astro.request)
+---
+
+<div class="user">
+    <img src={session?.user?.image || ""} width={40} height={40} alt=""/>
+    <div class="user-info">
+        <span>
+        {session?.user?.name}
+    </span>
+    <span style="opacity: 60%;">
+        {session?.user?.email}
+    </span>
+    </div>
+</div>
+
+
+<style>
+    .user {
+        display: flex;
+        align-items: center;
+        gap: 10px; max-width: 80%;
+    }
+    .user img {
+        border-radius: 100%;
+    }
+    .user-info span {
+        line-height: 1.1;
+        font-size: 14px;
+    }
+    .user-info {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+</style>
