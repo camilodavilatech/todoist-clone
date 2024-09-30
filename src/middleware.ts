@@ -5,7 +5,7 @@ const auth = defineMiddleware(async (context, next) => {
   const isSession = await getSession(context.request);
   const isHome = context.url.pathname.includes("/app");
 
-  if (isHome && typeof isSession === "undefined") {
+  if (isHome && isSession) {
     console.log("Redirecting to /");
     return context.redirect("/");
   } else if (!isHome && typeof isSession !== "undefined") {
