@@ -2,12 +2,19 @@
 import {menuSidebar} from "@/const"
 import SidebarItem from "./SidebarItem.astro"
 import UserMenu from "./UserMenu.astro"
+import SignOut from "./SignOut.astro"
 ---
 
 <aside class="sidebar">
     <div class="sidebar-content">
         <div>
-            <UserMenu />
+            <div style="display:flex">
+                <UserMenu />
+                <div style="width: fit-content; padding: 0 10px;">
+                    <a href="">no</a>
+                    <a href="">menu</a>
+                </div>
+            </div>
             <nav>
                 <ul style="gap: 4px 0;" >
                     {menuSidebar.map(({label, icon, href}) => (
@@ -20,6 +27,7 @@ import UserMenu from "./UserMenu.astro"
         </div>
         
         <footer>
+            <SignOut/>
             <ul>
                 <SidebarItem icon="plus" href="">
                 Add a team
