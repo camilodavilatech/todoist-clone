@@ -1,19 +1,22 @@
 
-<button id="signOut">
+<button id="signout">
     signOut
 </button>
 
 
-<script lang="ts">
+<script>
     import {signOut} from "auth-astro/client"
 
-    const btn = document.getElementById("signOut")
- 
-    btn?.onclick = () => {
-        try {
+    const btn = document.getElementById("signout")
+    
+    if (btn) {
+        btn.onclick = () => {
+            try {
             signOut()
         } catch (error) {
             console.error(error)
         }
+        }
     }
+      
 </script>
