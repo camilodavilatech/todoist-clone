@@ -14,45 +14,45 @@ git log
 
 ## Tareas pendientes
 
-- 1.agregar el logo de todoist (fue agregado iconos svg en carpeta icons) (completada)
-- 2.los colores que aparecen en la pagina (se agregaron colores globales en layout.astro) (completada)
-- 3.Documentar comandos, los que hemos echo durante cada sesion de ahora en adelante (completada)
-- 4.agregar iconos en svg (completada)
-- 5.dentro de la carpeta componentes crear el componente, maquetar botones, item tarea contexto y textos
+- [ x ] agregar el logo de todoist (fue agregado iconos svg en carpeta icons) (completada)
+- [ x ] los colores que aparecen en la pagina (se agregaron colores globales en layout.astro) (completada)
+- [ 🏃‍♂️ ] Documentar comandos, los que hemos echo durante cada sesion de ahora en adelante (completada)
+- [ x ] agregar iconos en svg (completada)
+- [ 🏃‍♂️ ] dentro de la carpeta componentes crear el componente, maquetar botones, item tarea contexto y textos
 
 ## Tareas realizadas
 
-- [x] agregar el logo de todoist (fue agregado iconos svg en carpeta icons)
-- [x] los colores que aparecen en la pagina (se agregaron colores globales en layout.astro)
-- [x] se agregó imagen avatar en carpeta pública
+- [ x ] agregar el logo de todoist (fue agregado iconos svg en carpeta icons)
+- [ x ] los colores que aparecen en la pagina (se agregaron colores globales en layout.astro)
+- [ x ] se agregó imagen avatar en carpeta pública
 
 ### 26/09/2024
 
-- [x] se creo las credenciales de google cloud para la autenticacion
-- [x] se creo en la raiz del proyecto el archivo .env dentro se crea las variables de entorno
+- [ x ] se creo las credenciales de google cloud para la autenticacion
+- [ x ] se creo en la raiz del proyecto el archivo .env dentro se crea las variables de entorno
 
 ```shell
 GOOGLE_CLIENT_SECRET=""
 GOOGLE_CLIENT_ID=""
 ```
 
-- [x] se detiene la terminal y se agrega el siguiente comando (npx astro add vercel) ejecutar codigo al lado del servidor y (npx astro add auth-astro) permite añadir la autenticacion
-- [x] se crea un archivo .env.dev como ejemplo para dar a entender que se debe anexar la coneccion a google cloud
+- [ x ] se detiene la terminal y se agrega el siguiente comando (npx astro add vercel) ejecutar codigo al lado del servidor y (npx astro add auth-astro) permite añadir la autenticacion
+- [ x ] se crea un archivo .env.dev como ejemplo para dar a entender que se debe anexar la coneccion a google cloud
 
 ```shell
 AUTH_SECRET=auth-secret
 AUTH_TRUST_HOST=true
-```
 
-y en la variable se crea un id hasheado que nos arroja la terminal con el comando:
+# En la variable se crea un hash con openssl desde la terminal
+```
 
 ```shell
 openssl rand -hex 32
 # lo pegamos en AUTH_SECRET=.
 ```
 
-- [x] creamos un componente de autenticacion en componentes creamos el archivo `GoogleSignIn.astro` y dentro se agrega el codigo svg del boton de google
-- [x] Se da estilo al boton de inicio de sesion con google
+- [ x ] creamos un componente de autenticacion en componentes creamos el archivo `GoogleSignIn.astro` y dentro se agrega el codigo svg del boton de google
+- [ x ] Se da estilo al boton de inicio de sesion con google
 
 ### 27/09/2024
 
