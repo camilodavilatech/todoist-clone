@@ -1,9 +1,8 @@
 ---
-import Seo from '../components/Seo.astro';
-
+import Seo from "../components/Seo.astro";
 
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -11,43 +10,54 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<Seo title={title}/>
-	</head>
-	<body style="display: flex;">
-		<slot />
-	</body>
+  <head>
+    <Seo title={title} />
+  </head>
+  <body style="display: flex;">
+    <slot />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--primary: #dc4c3e;
-		--primary-op: #dc4b3e14;
-		--secondary: #fcfaf8;
-		--red-500: #e34432;
-		--green: #ebf5f0;
-		--accents-creme: #fae8d6;
-		--accents-yellow: #ffc93e;
-    	--accents-green: #6b8767;
-    	--accents-pink: #ffada4;
-		--primary-button-blue: #316fea;
-
-	}
-	*, body {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	} 
-	body {
-		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	}
-	main {
-		flex: 1;
-	}
-	a {
-		text-decoration: none;
-		color: inherit;
-	}
-	ul{
-		list-style: none;
-	}
+  :root {
+    --primary: #dc4c3e;
+    --primary-op: #dc4b3e14;
+    --secondary: #fcfaf8;
+    --red-500: #e34432;
+    --green: #ebf5f0;
+    --accents-creme: #fae8d6;
+    --accents-yellow: #ffc93e;
+    --accents-green: #6b8767;
+    --accents-pink: #ffada4;
+    --primary-button-blue: #316fea;
+  }
+  *,
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      "Open Sans",
+      "Helvetica Neue",
+      sans-serif;
+  }
+  main {
+    flex: 1;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  ul {
+    list-style: none;
+  }
 </style>

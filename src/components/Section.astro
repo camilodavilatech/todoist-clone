@@ -1,84 +1,67 @@
 ---
-import {Icon} from "astro-icon/components"
+import { Icon } from "astro-icon/components";
 
 type Props = {
-    icon: string,
-    valor: string,
-    label: string,
-    descripcion?: string
-    titulo?: string
-}
+  icon: string;
+  valor: string;
+  label: string;
+  descripcion?: string;
+  titulo?: string;
+};
 
-const {icon, valor, label, descripcion, titulo} = Astro.props
+const { icon, valor, label, descripcion, titulo } = Astro.props;
 ---
 
 <style>
+  .section {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.231);
+    margin: 1rem 0.5rem;
+    padding: 1rem 1.5rem;
+    gap: 2rem;
+  }
 
-    .section{
-display: flex;
-width: 100%;
-border-bottom: 1px solid rgba(0, 0, 0, 0.231);
-margin: 1rem 0.5rem;
-padding: 1rem 1.5rem; 
-gap: 2rem;
-    }
+  .seccion-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex: 1;
+    width: 100%;
+    gap: 1.5rem;
+  }
 
-
-    .seccion-contenido{
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        flex: 1;
-        width: 100%;
-        gap: 1.5rem;
-    }
-
-    .seccion-contenido p{
-
-        opacity: 70%;
-        font-size: 14px;
-
-    }
-
-
-
+  .seccion-contenido p {
+    opacity: 70%;
+    font-size: 14px;
+  }
 </style>
 
 <article class="section">
-
-<div class = "seccion-contenido">
-    <label for={label} > 
-        <input name={label} id= {label} type="checkbox"  value={valor} />
+  <div class="seccion-contenido">
+    <label for={label}>
+      <input name={label} id={label} type="checkbox" value={valor} />
     </label>
     <div>
-
-<!--
+      <!--
 This is a multi-line comment
 It can span multiple lines
 -->
 
       <!-- linea siguiente condicional: si existe titulo renderiza h4 de lo contraio no haga nada -->
- {titulo && (<h4>{titulo}</h4>)} 
-        <p>{descripcion}</p>
+      {titulo && <h4>{titulo}</h4>}
+      <p>{descripcion}</p>
     </div>
   </div>
 
   <!-- <input type="radio" id="huey" name="drone" value="huey" checked />
   <label for="huey">Huey</label> -->
 
-
-
   <span
-  class:list={[
-      {"item-add": icon == "plus"}
-  ]}
-  style="display: flex; gap: 0 4px; justify-content:flex-end; align-items:normal;">
-   <Icon name={icon} size={27} class:list={[
-       {"add": icon == "plus"}
-   ]} />
-       <slot/>
-
+    class:list={[{ "item-add": icon == "plus" }]}
+    style="display: flex; gap: 0 4px; justify-content:flex-end; align-items:normal;"
+  >
+    <Icon name={icon} size={27} class:list={[{ add: icon == "plus" }]} />
+    <slot />
   </span>
-
-
 </article>

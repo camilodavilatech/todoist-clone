@@ -1,22 +1,17 @@
-
-<button id="signout">
-    signOut
-</button>
-
+<button id="signout"> signOut </button>
 
 <script>
-    import {signOut} from "auth-astro/client"
+  import { signOut } from "auth-astro/client";
 
-    const btn = document.getElementById("signout")
-    
-    if (btn) {
-        btn.onclick = () => {
-            try {
-            signOut()
-        } catch (error) {
-            console.error(error)
-        }
-        }
-    }
-      
+  const btn = document.getElementById("signout");
+
+  if (btn) {
+    btn.onclick = () => {
+      try {
+        signOut();
+      } catch (error) {
+        console.error(error);
+      }
+    };
+  }
 </script>
