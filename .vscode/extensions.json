@@ -1,4 +1,8 @@
 {
-  "recommendations": ["astro-build.astro-vscode", "jock.svg"],
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "jock.svg",
+    "esbenp.prettier-vscode"
+  ],
   "unwantedRecommendations": []
 }

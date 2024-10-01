@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\""
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
@@ -17,6 +18,18 @@
     "astro": "^4.15.8",
     "astro-icon": "^1.1.1",
     "auth-astro": "^4.1.2",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "@typescript-eslint/parser": "^8.8.0",
+    "@typescript-eslint/typescript-estree": "^8.8.0",
+    "eslint": "^9.11.1",
+    "eslint-plugin-astro": "^1.2.4",
+    "globals": "^15.9.0",
+    "prettier": "^3.3.3",
+    "prettier-config-standard": "^7.0.0",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript-eslint": "^8.8.0"
   }
 }
