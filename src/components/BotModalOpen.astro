@@ -1,0 +1,49 @@
+<button id="btn-how">Show the dialog</button>
+
+<dialog id="dialog">
+  <header>
+    <h4>Modal</h4>
+    <button id="btn-close">Close</button>
+  </header>
+  <p>This modal dialog has a groovy backdrop!</p>
+  <footer></footer>
+</dialog>
+
+<style>
+  dialog::backdrop {
+    background: rgba(255, 255, 255, 0.486);
+    backdrop-filter: blur(10px);
+  }
+  dialog[open] {
+    display: block;
+    padding: 1.5rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.226);
+    border-radius: 20px;
+    margin: auto;
+  }
+  dialog header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.226);
+  }
+</style>
+
+<script lang="ts">
+  const dialog = document.getElementById("dialog");
+  const showButton = document.getElementById("btn-how");
+  const closeButton = document.getElementById("btn-close");
+
+  showButton.addEventListener("click", () => {
+    console.log("entra add listener");
+    dialog.showModal();
+  });
+
+  // "Close" button closes the dialog
+  closeButton.addEventListener("click", () => {
+    console.log("entra close button");
+
+    dialog.close();
+  });
+</script>
