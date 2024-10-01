@@ -104,3 +104,9 @@ git pull origin main
 [guía visual gratuita de CSS. Presenta las propiedades más populares y las explica con ejemplos ilustrados y animados .](https://cssreference.io/)
 
 [Estos recursos están diseñados para mejorar la experiencia en el desarrollo de frontend, independientemente de su nivel de experiencia.](https://freefrontend.com)
+
+## ejecutar configuración de eslint y prettier
+
+```shell
+pnpm run lint
+```
