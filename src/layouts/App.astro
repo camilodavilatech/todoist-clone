@@ -4,16 +4,16 @@ import Layout from "./Layout.astro";
 import Header from "@/components/Header.astro";
 
 type Props = {
-    title: string;
+  title: string;
 };
 
-const {title} = Astro.props
+const { title } = Astro.props;
 ---
 
 <Layout title={title}>
-    <Sideabar/>
-		<main>
-			<Header />
-			<slot />
-		</main>
+  <Sideabar />
+  <main>
+    <Header />
+    <slot />
+  </main>
 </Layout>

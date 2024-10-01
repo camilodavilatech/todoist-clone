@@ -1,41 +1,31 @@
 ---
-import {Icon} from "astro-icon/components"
+import { Icon } from "astro-icon/components";
 
 type Props = {
-    icon: string,
-    href: string
-}
+  icon: string;
+  href: string;
+};
 
-const {icon, href} = Astro.props
+const { icon, href } = Astro.props;
 
-const pathname = Astro.url.pathname
+const pathname = Astro.url.pathname;
 ---
 
-
 <li class="item">
-    <a href={href} class:list={[
-        "item-a",
-        {active: pathname == href}
-    ]}>
-       <span
-       class:list={[
-           {"item-add": icon == "plus"}
-       ]}
-       style="display: flex; gap: 0 4px; justify-content: center; align-items: center;">
-        <Icon name={icon} size={27} class:list={[
-            {"add": icon == "plus"}
-        ]} />
-            <slot/>
-        
-       </span>
-       <span></span>
-    </a>
+  <a href={href} class:list={["item-a", { active: pathname == href }]}>
+    <span
+      class:list={[{ "item-add": icon == "plus" }]}
+      style="display: flex; gap: 0 4px; justify-content: center; align-items: center;"
+    >
+      <Icon name={icon} size={27} class:list={[{ add: icon == "plus" }]} />
+      <slot />
+    </span>
+    <span></span>
+  </a>
 </li>
 
-
 <style is:global>
-
-.item-a {
+  .item-a {
     font-size: 14px;
     display: flex;
     justify-content: space-between;
@@ -43,24 +33,24 @@ const pathname = Astro.url.pathname
     height: fit-content;
     opacity: 80%;
     padding: 5px 10px;
-}
-.item-a:hover {
+  }
+  .item-a:hover {
     opacity: 100%;
     background: var(--primary-op);
-}
-.item-add {
+  }
+  .item-add {
     color: var(--primary);
     font-weight: 600;
-}
-.add {
+  }
+  .add {
     background: var(--primary);
     color: white;
     padding: 5px;
     border-radius: 100%;
-}
-.active {
+  }
+  .active {
     color: var(--primary);
     background: var(--primary-op);
     font-weight: 600;
-}
+  }
 </style>

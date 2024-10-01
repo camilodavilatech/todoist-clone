@@ -9,6 +9,7 @@ export default defineConfig({
     }),
   ],
 
+  secret: import.meta.env.AUTH_SECRET,
   callbacks: {
     async session({ session }) {
       return session;
