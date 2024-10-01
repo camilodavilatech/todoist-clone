@@ -105,4 +105,33 @@ git pull origin main
 
 [Estos recursos están diseñados para mejorar la experiencia en el desarrollo de frontend, independientemente de su nivel de experiencia.](https://freefrontend.com)
 
+## instalar dependencia prettier clase 01/10/2024
+
+ 1. instalar dependencias ->
+pnpm add -D prettier prettier-plugin-astro
+// .prettierrc.mjs
+/** @type {import("prettier").Config} */
+export default {
+  plugins: ['prettier-plugin-astro'],
+};
+2. crear un .prettierrc.mjs
+/** @type {import("prettier").Config} */
+export default {
+  plugins: ['prettier-plugin-astro'],
+  overrides: [
+    {
+      files: '*.astro',
+      options: {
+        parser: 'astro',
+      },
+    },
+  ],
+};
+
+> fullphantom 
+
+## tener en cuenta
+
+1. cada vez que se haga un comentario o crear un componentes poner el usuario de github
+en la seccion de los tres guiones se utiliza // y en la seccion del html se utili <!--comentarios-->
 
