@@ -12,7 +12,7 @@ git pull origin main
 git log
 ```
 
-## tareas pendientes
+## Tareas pendientes
 
 - 1.agregar el logo de todoist (fue agregado iconos svg en carpeta icons) (completada)
 - 2.los colores que aparecen en la pagina (se agregaron colores globales en layout.astro) (completada)
@@ -20,21 +20,39 @@ git log
 - 4.agregar iconos en svg (completada)
 - 5.dentro de la carpeta componentes crear el componente, maquetar botones, item tarea contexto y textos
 
-## tareas realizadas
+## Tareas realizadas
 
-1. agregar el logo de todoist (fue agregado iconos svg en carpeta icons)
-2. los colores que aparecen en la pagina (se agregaron colores globales en layout.astro)
-3. se agregó imagen avatar en carpeta pública
+- [x] agregar el logo de todoist (fue agregado iconos svg en carpeta icons)
+- [x] los colores que aparecen en la pagina (se agregaron colores globales en layout.astro)
+- [x] se agregó imagen avatar en carpeta pública
 
-### 26/09/2024-
+### 26/09/2024
 
-1. se creo las credenciales de google cloud para la autenticacion
-2. se creo en la raiz del proyecto el archivo .env dentro se crea las variables GOOGLE_CLIENT_SECRET y GOOGLE_CLIENT_ID y se agrega la informacion de cada uno
-3. se detiene la terminal y se agrega el siguiente comando (npx astro add vercel) ejecutar codigo al lado del servidor y (npx astro add auth-astro) permite añadir la autenticacion
-4. se crea un archivo .env.dev como ejemplo para dar a entender que se debe anexar la coneccion a google cloud
-5. en el archivo .env se agrega las variables `AUTH_SECRET=auth-secret` `AUTH_TRUST_HOST=true` y en la variable se crea un id hasheado que nos arroja la terminal con el comando (openssl rand -hex 32) y lo pegamos en aAUTH_SECRET=.
-6. creamos un componente de autenticacion en componentes creamos el archivo GoogleSingIn.astro y dentro se agrega el codigo svg del boton de google
-7. se da estilo al boton de inicio de sesion con google
+- [x] se creo las credenciales de google cloud para la autenticacion
+- [x] se creo en la raiz del proyecto el archivo .env dentro se crea las variables de entorno
+
+```shell
+GOOGLE_CLIENT_SECRET=""
+GOOGLE_CLIENT_ID=""
+```
+
+- [x] se detiene la terminal y se agrega el siguiente comando (npx astro add vercel) ejecutar codigo al lado del servidor y (npx astro add auth-astro) permite añadir la autenticacion
+- [x] se crea un archivo .env.dev como ejemplo para dar a entender que se debe anexar la coneccion a google cloud
+
+```shell
+AUTH_SECRET=auth-secret
+AUTH_TRUST_HOST=true
+```
+
+y en la variable se crea un id hasheado que nos arroja la terminal con el comando:
+
+```shell
+openssl rand -hex 32
+# lo pegamos en AUTH_SECRET=.
+```
+
+- [x] creamos un componente de autenticacion en componentes creamos el archivo `GoogleSignIn.astro` y dentro se agrega el codigo svg del boton de google
+- [x] Se da estilo al boton de inicio de sesion con google
 
 ### 27/09/2024
 
@@ -53,7 +71,7 @@ git commit -m "Descripción de los cambios"
 
 ![Alt](<./.github/1%20(1).png>)
 
-- 2. subir los cambios
+- subir los cambios
 
 ![Alt](<./.github/1%20(2).png>)
 
@@ -61,17 +79,17 @@ git commit -m "Descripción de los cambios"
 git push origin main
 ```
 
-- 3. En GitHub,
-     ![Alt](<./.github/1%20(3).png>)
+- En GitHub,
+  ![Alt](<./.github/1%20(3).png>)
   - ve a tu repositorio forkeado
   - hacer clic en el botton contribuir
   - haz clic en New Pull Request.
 
 ![Alt](<./.github/1%20(4).png>)
 
-- 4. Revisa los cambios y luego haz clic en Create Pull Request.
-- 5. Agrega un título y una descripción clara sobre los cambios.
-- 6. Finalmente, envía el Pull Request y espera la revisión.
+- Revisa los cambios y luego haz clic en Create Pull Request.
+- Agrega un título y una descripción clara sobre los cambios.
+- Finalmente, envía el Pull Request y espera la revisión.
 
 ## Hacer sync fork
 
@@ -81,13 +99,58 @@ git push origin main
 
 ![Alt](./.github/SYNC2.jpg)
 
-- 2. Desde la consola actualizamos el local.
+- Desde la consola actualizamos el local.
 
 ```shell
 git pull origin main
 ```
 
 ![Alt](./.github/SYNC3.jpg)
+
+## instalar dependencia prettier clase 01/10/2024
+
+1. instalar dependencias ->
+
+   ```shell
+   pnpm add -D prettier prettier-plugin-astro
+   ```
+
+```js
+// .prettierrc.mjs
+/\*_ @type {import("prettier").Config} _/;
+export default {
+  plugins: ["prettier-plugin-astro"],
+};
+```
+
+2.crear un .prettierrc.mjs
+
+```js
+/** @type {import("prettier").Config} */
+export default {
+  plugins: ["prettier-plugin-astro"],
+  overrides: [
+    {
+      files: "*.astro",
+      options: {
+        parser: "astro",
+      },
+    },
+  ],
+};
+```
+
+> fullphantom
+
+## ejecutar configuración de eslint y prettier
+
+```shell
+pnpm run lint
+```
+
+## componentes
+
+![Alt](./.github/componentesection.png)
 
 ## referencias y tutotiales
 
@@ -105,51 +168,7 @@ git pull origin main
 
 [Estos recursos están diseñados para mejorar la experiencia en el desarrollo de frontend, independientemente de su nivel de experiencia.](https://freefrontend.com)
 
-## instalar dependencia prettier clase 01/10/2024
-
-1. instalar dependencias ->
-
-   ```shell
-   pnpm add -D prettier prettier-plugin-astro
-   ```
-
-````js
-  // .prettierrc.mjs
-  /\*_ @type {import("prettier").Config} _/
-  export default {
-  plugins: ['prettier-plugin-astro'],
-  };
-  ```
-2.  crear un .prettierrc.mjs
-
-```js
-/** @type {import("prettier").Config} */
-export default {
-plugins: ["prettier-plugin-astro"],
-overrides: [
-  {
-    files: "*.astro",
-    options: {
-      parser: "astro",
-    },
-  },
-],
-};
-````
-
-> fullphantom
-
 ## tener en cuenta
 
 1. cada vez que se haga un comentario o crear un componentes poner el usuario de github
    en la seccion de los tres guiones se utiliza // y en la seccion del html se utili <!--comentarios-->
-
-## ejecutar configuración de eslint y prettier
-
-```shell
-pnpm run lint
-```
-
-## componentes
-
-![Alt](./.github/componentesection.png)
