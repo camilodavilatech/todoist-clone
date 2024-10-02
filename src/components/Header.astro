@@ -3,7 +3,9 @@ import BotModalOpen from "./BotModalOpen.astro";
 ---
 
 <header class="header">
-  <BotModalOpen />
+  <BotModalOpen icon= {"ver-menu"} title= {"vista"} />
+  <BotModalOpen icon= {"comentarios"} title= {""} />
+  <BotModalOpen icon= {"mas-acciones"} title= {""} />
 </header>
 
 <style>
@@ -13,5 +15,6 @@ import BotModalOpen from "./BotModalOpen.astro";
     display: flex;
     align-items: center;
     justify-content: end;
+    gap: 1px;
   }
 </style>

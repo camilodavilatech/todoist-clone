@@ -1,4 +1,16 @@
-<button id="btn-how">Show the dialog</button>
+---
+import { Icon } from 'astro-icon/components';
+import Button from './Button.astro';
+
+interface Props {
+  title : string;
+  icon : string;
+}
+
+const {title, icon} = Astro.props
+---
+
+<Button id="btn-show" icon="comentarios">{title}</Button>
 
 <dialog id="dialog">
   <header>
@@ -28,11 +40,24 @@
     padding: 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.226);
   }
+  .item-add {
+    color: var(--primary);
+    font-weight: 600;
+  }
+  .btn-show-dialog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--boton-text);
+    && span{padding: 0 1px;}
+  }
 </style>
 
 <script lang="ts">
   const dialog = document.getElementById("dialog");
-  const showButton = document.getElementById("btn-how");
+  const showButton = document.getElementById("btn-show");
   const closeButton = document.getElementById("btn-close");
 
   showButton.addEventListener("click", () => {
