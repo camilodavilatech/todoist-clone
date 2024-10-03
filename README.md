@@ -16,9 +16,9 @@ git log
 
 - [x] agregar el logo de todoist (fue agregado iconos svg en carpeta icons) (completada)
 - [x] los colores que aparecen en la pagina (se agregaron colores globales en layout.astro) (completada)
-- [🏃‍♂️] Documentar comandos, los que hemos echo durante cada sesion de ahora en adelante (completada)
+- [🏃] Documentar comandos, los que hemos echo durante cada sesion de ahora en adelante (completada)
 - [x] agregar iconos en svg (completada)
-- [🏃‍♂️] dentro de la carpeta componentes crear el componente, maquetar botones, item tarea contexto y textos
+- [🏃] dentro de la carpeta componentes crear el componente, maquetar botones, item tarea contexto y textos
 
 ## Tareas realizadas
 
