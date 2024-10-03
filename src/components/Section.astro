@@ -22,10 +22,10 @@ const { icon, valor, label, descripcion, titulo } = Astro.props;
     margin: 1rem 0.5rem;
     padding: 1rem 1.5rem;
   }
-  .date{
+  .date {
     color: var(--primary);
   }
-  .seccion-content{
+  .seccion-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -46,30 +46,29 @@ const { icon, valor, label, descripcion, titulo } = Astro.props;
 </style>
 
 <article class="section">
-<div class="seccion-content">
-  <div class="seccion-contenido">
-    <label for={label}>
-      <input name={label} id={label} type="checkbox" value={valor} />
-    </label>
+  <div class="seccion-content">
+    <div class="seccion-contenido">
+      <label for={label}>
+        <input name={label} id={label} type="checkbox" value={valor} />
+      </label>
+      <div>
+        <!-- linea siguiente condicional: si existe titulo renderiza h4 de lo contrario no haga nada -->
+
+        {titulo && <h4>{titulo}</h4>}
+        <p>{descripcion}</p>
+      </div>
+    </div>
+
     <div>
-
-      <!-- linea siguiente condicional: si existe titulo renderiza h4 de lo contrario no haga nada -->
-
-      {titulo && <h4>{titulo}</h4>}
-      <p>{descripcion}</p>
+      <Button icon="mas-acciones" />
     </div>
   </div>
-
-  <div>
-    <Button icon = "mas-acciones"></Button>
+  <div class="seccion-content">
+    <span class="date">octubre 02</span>
+    <span
+      style="display: flex; gap: 0 4px; justify-content:flex-end; align-items:normal;"
+    >
+      <Icon name={icon} size={27} />
+    </span>
   </div>
-
-</div>
-<div class="seccion-content">
-  <span class="date">octubre 02</span>
-  <span
-  style="display: flex; gap: 0 4px; justify-content:flex-end; align-items:normal;">
-  <Icon name={icon} size={27}/>
-</span>
-</div>
 </article>
