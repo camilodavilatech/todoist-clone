@@ -2,6 +2,7 @@
 import Sideabar from "@/components/Sideabar.astro";
 import Layout from "./Layout.astro";
 import Header from "@/components/Header.astro";
+import BotAgregar from "@/components/BotAgregar.astro";
 
 type Props = {
   title: string;
@@ -17,6 +18,8 @@ const { title } = Astro.props;
     <div class="container">
       <slot />
     </div>
+    <slot />
+    <BotAgregar />
   </main>
 </Layout>
 

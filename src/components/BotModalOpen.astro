@@ -1,13 +1,13 @@
 ---
-import { Icon } from 'astro-icon/components';
-import Button from './Button.astro';
+import { Icon } from "astro-icon/components";
+import Button from "./Button.astro";
 
 interface Props {
-  title : string;
-  icon : string;
+  title: string;
+  icon: string;
 }
 
-const {title, icon} = Astro.props
+const { title, icon } = Astro.props;
 ---
 
 <Button id="btn-show" icon="comentarios">{title}</Button>
@@ -44,14 +44,16 @@ const {title, icon} = Astro.props
     color: var(--primary);
     font-weight: 600;
   }
-  .btn-show-dialog{
+  .btn-show-dialog {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 12px;
     font-weight: 700;
     color: var(--boton-text);
-    && span{padding: 0 1px;}
+    && span {
+      padding: 0 1px;
+    }
   }
 </style>
 
