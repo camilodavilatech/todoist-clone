@@ -11,17 +11,18 @@ import { Icon } from "astro-icon/components";
     background: transparent;
     outline: none;
     border: none;
+    opacity: 0.8;
   }
 
-  .btn-plus:hover > .btn-plus--icon{
+  .btn-plus:hover > .btn-plus--icon {
     background: var(--primary);
     color: white;
- }
+  }
 
-  .btn-plus:hover > .btn-plus--text{
+  .btn-plus:hover > .btn-plus--text {
     color: var(--primary);
- }
-  .btn-plus .btn-plus--icon{
+  }
+  .btn-plus .btn-plus--icon {
     display: grid;
     place-content: center;
     width: 20px;
@@ -30,11 +31,47 @@ import { Icon } from "astro-icon/components";
     border-radius: 100%;
   }
 
+.form-textos{
+  display: flex;
+  flex-direction: column;
+}
+
+  .nombre{
+        border:transparent;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .descripcion{
+        border:transparent;
+    }
+
+
 </style>
 
 <button id="bot-add" class="btn-plus">
-  <span class = "btn-plus--icon">
+  <span class="btn-plus--icon">
     <Icon name="plus" size={16} />
   </span>
-  <span class="btn-plus--text"> Añadir tarea </span>
+  <span class="btn-plus--text">Add task</span>
 </button>
+
+<form action="">
+  <div>
+      <div class="form-textos">
+        <input type="text" class= "nombre" placeholder="Task name" required>
+        <input type="text" class= "descripcion" placeholder="Description" required>
+      </div>
+  </div>
+      <input type="date" id= "date" placeholder="Date" required>
+      <select name = "prioriades" required> 
+          <option value="">Prioridad</option>  
+          <option value="1">Prioridad1</option>  
+          <option value="2">Prioridad2</option>  
+          <option value="3">Prioridad3</option>  
+          <option value="4">Prioridad4</option>  
+      </select>
+    <div>
+      <button id = "bot-cancela-tarea">Cancel</button>
+      <button id = "bot-agrega-tarea">Add task</button>
+    </div>
+  </form>
