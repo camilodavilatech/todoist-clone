@@ -12,6 +12,31 @@ git pull origin main
 git log
 ```
 
+## comandos
+
+```shell
+pnpm add <nombre del paquete o paquetes>
+```
+
+## base de datos
+
+creaacion de la tabla tasks
+
+```sql
+create table tasks (
+  id integer primary key autoincrement,
+  user_id int,
+  title varchar(255),
+  description varchar(255),
+  date date,
+  foreign key (user_id) references users(id) ON delete cascade
+)
+```
+
+para ejecutar cada comando reemplace <nombre del paquete o paquetes> por el nombre del paquete
+
+ej: pnpm add @libsql/client y Enter
+
 ## Tareas pendientes
 
 - [x] agregar el logo de todoist (fue agregado iconos svg en carpeta icons) (completada)
@@ -172,3 +197,6 @@ pnpm run lint
 
 1. cada vez que se haga un comentario o crear un componentes poner el usuario de github
    en la seccion de los tres guiones se utiliza // y en la seccion del html se utili <!--comentarios-->
+
+2. Las importaciones SIEMPRE van al inicio del archivo.
+
