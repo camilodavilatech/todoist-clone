@@ -11,6 +11,7 @@ import { Icon } from "astro-icon/components";
     background: transparent;
     outline: none;
     border: none;
+    opacity: 0.8;
   }
 
   .btn-plus:hover > .btn-plus--icon {
@@ -29,11 +30,122 @@ import { Icon } from "astro-icon/components";
     padding: 8px;
     border-radius: 100%;
   }
+
+  .form-textos {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    width: 100%;
+    border: transparent;
+    outline: none;
+    font-size: 14px;
+    margin: 0.2rem 0;
+  }
+  select {
+    width: fit-content;
+    border: transparent;
+    outline: none;
+    padding: 0.5rem;
+  }
+  select:hover {
+    background: var(--gray1);
+  }
+
+  #form {
+    flex-direction: column;
+    gap: 1rem 0.5rem;
+    border: 1px solid rgba(128, 128, 128, 0.466);
+    padding: 1rem;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+  }
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  .form-actions {
+    border-top: 2px solid var(--gray1);
+  }
+  button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+  button:nth-child(2) {
+    background: var(--primary);
+    color: white;
+  }
 </style>
 
 <button id="bot-add" class="btn-plus">
   <span class="btn-plus--icon">
     <Icon name="plus" size={16} />
   </span>
-  <span class="btn-plus--text"> Añadir tarea </span>
+  <span class="btn-plus--text">Add task</span>
 </button>
+
+<form id="form" style="display: none">
+  <div>
+    <div class="form-textos">
+      <label>
+        <input
+          style="font-weight: 600; font-size: 18px;"
+          type="text"
+          class="nombre"
+          placeholder="Task name"
+          required
+        />
+      </label>
+      <label>
+        <input
+          type="text"
+          class="descripcion"
+          placeholder="Description"
+          required
+        />
+      </label>
+    </div>
+  </div>
+  <div class="form-dates">
+    <input type="date" id="date" placeholder="Date" required />
+  </div>
+
+  <div class="form-actions">
+    <select name="prioriades" required>
+      <option value="">Prioridad</option>
+      <option value="1">Prioridad1</option>
+      <option value="2">Prioridad2</option>
+      <option value="3">Prioridad3</option>
+      <option value="4">Prioridad4</option>
+    </select>
+    <div
+      style="flex: 1; gap: 0.5rem; width: 100%; display: flex; justify-content: end;"
+    >
+      <button class="btn" type="button" id="bot-cancelar">Cancel</button>
+      <button class="btn" type="submit" id="bot-agregar">Add task</button>
+    </div>
+  </div>
+</form>
+
+<script>
+  const btn = document.getElementById("bot-add");
+  const btnCancelar = document.getElementById("bot-cancelar");
+  const form = document.getElementById("form");
+
+  if (!btn || !form || !btnCancelar) {
+    throw new Error("Element not found");
+  }
+
+  btn.onclick = () => {
+    btn.style.display = "none";
+    form.style.display = "flex";
+  };
+
+  btnCancelar.onclick = () => {
+    form.style.display = "none";
+    btn.style.display = "flex";
+  };
+</script>
