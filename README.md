@@ -91,6 +91,25 @@ git push origin main
 - Agrega un título y una descripción clara sobre los cambios.
 - Finalmente, envía el Pull Request y espera la revisión.
 
+## ESTRUCTURA BASE DE DATOS
+```SQL
+CREATE  TABLE users(
+  id INTEGER PRIMARY KEY,
+  first_name VARCHAR (100) NOT NULL,
+  last_name VARCHAR(100) NOT NULL,
+  avatar VARCHAR(100),
+  email VARCHAR(100)
+)
+CREATE TABLE tasks(
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+user_id INT,
+title VARCHAR(225),
+description VARCHAR(225),
+date DATE,
+
+FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE
+)
+```
 ## Hacer sync fork
 
 - 1. Sincronizar el proyecto desde github.

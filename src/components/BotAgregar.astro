@@ -13,15 +13,15 @@ import { Icon } from "astro-icon/components";
     border: none;
   }
 
-  .btn-plus:hover > .btn-plus--icon{
+  .btn-plus:hover > .btn-plus--icon {
     background: var(--primary);
     color: white;
- }
+  }
 
-  .btn-plus:hover > .btn-plus--text{
+  .btn-plus:hover > .btn-plus--text {
     color: var(--primary);
- }
-  .btn-plus .btn-plus--icon{
+  }
+  .btn-plus .btn-plus--icon {
     display: grid;
     place-content: center;
     width: 20px;
@@ -29,11 +29,10 @@ import { Icon } from "astro-icon/components";
     padding: 8px;
     border-radius: 100%;
   }
-
 </style>
 
 <button id="bot-add" class="btn-plus">
-  <span class = "btn-plus--icon">
+  <span class="btn-plus--icon">
     <Icon name="plus" size={16} />
   </span>
   <span class="btn-plus--text"> Añadir tarea </span>
