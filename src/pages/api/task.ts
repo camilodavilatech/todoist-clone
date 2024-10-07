@@ -16,6 +16,7 @@ export const POST: APIRoute = async ({ request }) => {
   }
   return new Response(JSON.stringify(parsed.data));
 };
+
 export const GET: APIRoute = async ({ request }) => {
   const sesion = await getSession(request);
   if (!sesion) {
@@ -25,6 +26,7 @@ export const GET: APIRoute = async ({ request }) => {
   }
   return new Response(JSON.stringify({ msg: "mensaje de prueba metodo GET" }));
 };
+
 export const PUT: APIRoute = async ({ request }) => {
   const sesion = await getSession(request);
   if (!sesion) {
@@ -34,6 +36,7 @@ export const PUT: APIRoute = async ({ request }) => {
   }
   return new Response(JSON.stringify({ msg: "mensaje de prueba metodo PUT" }));
 };
+
 export const DELETE: APIRoute = async ({ request }) => {
   const sesion = await getSession(request);
   if (!sesion) {

@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "astro:content";
 
 export const taskFormat = z.object({
   user_id: z.number().or(z.string().transform((val) => parseInt(val))),

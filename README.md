@@ -92,6 +92,7 @@ git push origin main
 - Finalmente, envía el Pull Request y espera la revisión.
 
 ## ESTRUCTURA BASE DE DATOS
+
 ```SQL
 CREATE  TABLE users(
   id INTEGER PRIMARY KEY,
@@ -110,6 +111,7 @@ date DATE,
 FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE
 )
 ```
+
 ## Hacer sync fork
 
 - 1. Sincronizar el proyecto desde github.
